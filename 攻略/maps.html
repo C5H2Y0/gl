@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NTY | Red Desert - Maps</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Serif:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <div class="logo-icon">⚔️</div>
+                <span>NTY | Red Desert</span>
+            </div>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search guides, characters, maps...">
+                <button id="search-btn" class="search-btn">🔍</button>
+                <div id="search-results" class="search-results"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="guide.html">Game Guide</a></li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="maps.html" class="active">Maps</a></li>
+                <li><a href="equipment.html">Equipment</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="maps-content">
+            <h1 class="page-title">Maps</h1>
+
+            <section class="map-section">
+                <h3>World Overview</h3>
+                <p>The world of Red Desert consists of several regions, each with unique environments and challenges. Click on any map card to view detailed interactive map with marked locations!</p>
+            </section>
+
+            <div class="map-grid">
+                <div class="map-card" onclick="openMapModal('oasis')">
+                    <div class="map-icon">🌴</div>
+                    <h4>Oasis Town</h4>
+                    <p>The starting point for players. A sanctuary with clear springs and palm trees in the middle of the desert.</p>
+                    <span class="click-hint">Click to view map</span>
+                </div>
+
+                <div class="map-card" onclick="openMapModal('desert')">
+                    <div class="map-icon">🏜️</div>
+                    <h4>Yellow Sand Desert</h4>
+                    <p>Vast desert area with ancient ruins and dangerous creatures lurking.</p>
+                    <span class="click-hint">Click to view map</span>
+                </div>
+
+                <div class="map-card" onclick="openMapModal('flame')">
+                    <div class="map-icon">🔥</div>
+                    <h4>Flame Caves</h4>
+                    <p>Underground caves filled with lava and fire elements. Location of high-level dungeons.</p>
+                    <span class="click-hint">Click to view map</span>
+                </div>
+
+                <div class="map-card" onclick="openMapModal('temple')">
+                    <div class="map-icon">🏛️</div>
+                    <h4>Lost Temple</h4>
+                    <p>Ancient temple from a lost civilization. Contains great treasures and unknown dangers.</p>
+                    <span class="click-hint">Click to view map</span>
+                </div>
+
+                <div class="map-card" onclick="openMapModal('storm')">
+                    <div class="map-icon">🌪️</div>
+                    <h4>Storm Sea</h4>
+                    <p>Dangerous area shrouded in sandstorms. Home to powerful storm elementals.</p>
+                    <span class="click-hint">Click to view map</span>
+                </div>
+
+                <div class="map-card" onclick="openMapModal('crystal')">
+                    <div class="map-icon">💎</div>
+                    <h4>Crystal Desert</h4>
+                    <p>Rich in crystal resources. Main source of rare crafting materials.</p>
+                    <span class="click-hint">Click to view map</span>
+                </div>
+            </div>
+
+            <section class="map-section">
+                <h3>Exploration Tips</h3>
+                <ul>
+                    <li>Bring enough water and food to avoid thirst and hunger in the desert</li>
+                    <li>Watch for weather changes - sandstorms affect visibility and movement speed</li>
+                    <li>Use map markers to record important locations</li>
+                    <li>Explore in groups for safety - watch each other's backs</li>
+                    <li>Look for hidden entrances and secret passages</li>
+                </ul>
+            </section>
+
+            <section class="map-section">
+                <h3>Recommended Levels by Region</h3>
+                <ul>
+                    <li>Oasis Town: Level 1-10</li>
+                    <li>Yellow Sand Desert: Level 10-20</li>
+                    <li>Flame Caves: Level 20-30</li>
+                    <li>Lost Temple: Level 30-40</li>
+                    <li>Storm Sea: Level 40-50</li>
+                    <li>Crystal Desert: Level 50+</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <div id="map-modal" class="map-modal">
+        <div class="map-modal-content">
+            <div class="map-modal-header">
+                <h2 id="map-modal-title">Map Title</h2>
+                <span class="map-modal-close" onclick="closeMapModal()">&times;</span>
+            </div>
+            <div class="map-modal-body">
+                <div id="interactive-map" class="interactive-map">
+                    <div class="map-canvas" id="map-canvas"></div>
+                    <div class="map-legend">
+                        <h4>Legend</h4>
+                        <div class="legend-item"><span class="marker-quest"></span> Quest NPC</div>
+                        <div class="legend-item"><span class="marker-dungeon"></span> Dungeon</div>
+                        <div class="legend-item"><span class="marker-treasure"></span> Treasure</div>
+                        <div class="legend-item"><span class="marker-boss"></span> World Boss</div>
+                        <div class="legend-item"><span class="marker-vendor"></span> Vendor</div>
+                        <div class="legend-item"><span class="marker-teleport"></span> Teleport</div>
+                    </div>
+                </div>
+                <div class="map-info-panel">
+                    <h3 id="map-info-title">Region Information</h3>
+                    <div id="map-info-content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="feedback-toggle" id="feedback-toggle">
+        <span class="toggle-icon">💬</span>
+        <span class="toggle-arrow">›</span>
+    </div>
+
+    <div class="feedback-panel" id="feedback-panel">
+        <div class="panel-body">
+            <div class="panel-header">
+                <h3>💬 Feedback</h3>
+                <span class="close-btn" id="close-btn">✕</span>
+            </div>
+            
+            <div class="panel-content">
+                <div class="feedback-form">
+                    <form id="feedback-form">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email (optional)">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Enter your feedback or suggestions..." rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </div>
+                
+                <div class="feedback-list">
+                    <h4>Latest Comments</h4>
+                    <div id="comments-list">
+                        <div class="comment-item">
+                            <div class="comment-header">
+                                <span class="comment-name">Explorer Xiao Ming</span>
+                                <span class="comment-date">May 19, 2026</span>
+                            </div>
+                            <p class="comment-content">Very detailed guides, very helpful! Looking forward to more dungeon guides!</p>
+                        </div>
+                        <div class="comment-item">
+                            <div class="comment-header">
+                                <span class="comment-name">Desert Warrior</span>
+                                <span class="comment-date">May 18, 2026</span>
+                            </div>
+                            <p class="comment-content">Excellent character guides, very helpful for new players!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Natie | Red Desert Strategy Guide. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

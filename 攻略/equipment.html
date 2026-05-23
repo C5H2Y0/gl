@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NTY | Red Desert - Equipment</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Serif:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <div class="logo-icon">⚔️</div>
+                <span>NTY | Red Desert</span>
+            </div>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search guides, characters, maps...">
+                <button id="search-btn" class="search-btn">🔍</button>
+                <div id="search-results" class="search-results"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="guide.html">Game Guide</a></li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="maps.html">Maps</a></li>
+                <li><a href="equipment.html" class="active">Equipment</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="equipment-content">
+            <h1 class="page-title">Equipment</h1>
+
+            <section class="equipment-section">
+                <h3>Weapon Types</h3>
+                <p>There are multiple weapon types in the game, each with unique attributes and suitable classes:</p>
+            </section>
+
+            <div class="equipment-grid">
+                <div class="equipment-card">
+                    <div class="equipment-icon">⚔️</div>
+                    <h4>Greatsword</h4>
+                    <div class="rarity">Rarity: Legendary</div>
+                    <p>Two-handed weapon with the highest base attack. Ideal for Warriors.</p>
+                </div>
+
+                <div class="equipment-card">
+                    <div class="equipment-icon">🔮</div>
+                    <h4>Staff</h4>
+                    <div class="rarity">Rarity: Epic</div>
+                    <p>Range weapon that enhances magic attack. Preferred by Mages and Summoners.</p>
+                </div>
+
+                <div class="equipment-card">
+                    <div class="equipment-icon">🏹</div>
+                    <h4>Longbow</h4>
+                    <div class="rarity">Rarity: Rare</div>
+                    <p>Range weapon with long attack distance. Suitable for Rangers.</p>
+                </div>
+
+                <div class="equipment-card">
+                    <div class="equipment-icon">🗡️</div>
+                    <h4>Daggers</h4>
+                    <div class="rarity">Rarity: Epic</div>
+                    <p>Melee weapon with fast attack speed and high crit rate. Assassin's exclusive weapon.</p>
+                </div>
+
+                <div class="equipment-card">
+                    <div class="equipment-icon">✨</div>
+                    <h4>Rod</h4>
+                    <div class="rarity">Rarity: Rare</div>
+                    <p>Support weapon that enhances healing. Suitable for Clerics.</p>
+                </div>
+
+                <div class="equipment-card">
+                    <div class="equipment-icon">🗡️</div>
+                    <h4>Scimitar</h4>
+                    <div class="rarity">Rarity: Fine</div>
+                    <p>Balanced weapon with good attack and speed. Suitable for multiple classes.</p>
+                </div>
+            </div>
+
+            <section class="equipment-section">
+                <h3>Equipment Rarity</h3>
+                <ul>
+                    <li>Common (White): Basic stats</li>
+                    <li>Fine (Green): Slightly enhanced stats</li>
+                    <li>Rare (Blue): Noticeably enhanced stats</li>
+                    <li>Epic (Purple): Greatly enhanced stats with special effects</li>
+                    <li>Legendary (Orange): Top-tier gear with powerful unique skills</li>
+                </ul>
+            </section>
+
+            <section class="equipment-section">
+                <h3>Equipment Acquisition</h3>
+                <ul>
+                    <li>Dungeon Drops: Challenge dungeons for a chance at high-quality gear</li>
+                    <li>Quest Rewards: Complete specific quests for gear rewards</li>
+                    <li>Shop Purchase: Buy with gold or reputation</li>
+                    <li>Crafting: Collect materials to craft gear</li>
+                    <li>World BOSS: Defeat world BOSS for guaranteed high-quality gear</li>
+                </ul>
+            </section>
+
+            <section class="equipment-section">
+                <h3>Equipment Enhancement</h3>
+                <p>Equipment can be enhanced to improve stats:</p>
+                <ul>
+                    <li>Enhancement Level: Up to +15 with success rate</li>
+                    <li>Gem Socketing: Different gems provide different stat bonuses</li>
+                    <li>Reforging: Randomly refresh gear bonus stats</li>
+                    <li>Upgrade: Increase gear rarity level</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <div class="feedback-toggle" id="feedback-toggle">
+        <span class="toggle-icon">💬</span>
+        <span class="toggle-arrow">›</span>
+    </div>
+
+    <div class="feedback-panel" id="feedback-panel">
+        <div class="panel-body">
+            <div class="panel-header">
+                <h3>💬 Feedback</h3>
+                <span class="close-btn" id="close-btn">✕</span>
+            </div>
+            
+            <div class="panel-content">
+                <div class="feedback-form">
+                    <form id="feedback-form">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email (optional)">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Enter your feedback or suggestions..." rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </div>
+                
+                <div class="feedback-list">
+                    <h4>Latest Comments</h4>
+                    <div id="comments-list">
+                        <div class="comment-item">
+                            <div class="comment-header">
+                                <span class="comment-name">Explorer Xiao Ming</span>
+                                <span class="comment-date">May 19, 2026</span>
+                            </div>
+                            <p class="comment-content">Very detailed guides, very helpful! Looking forward to more dungeon guides!</p>
+                        </div>
+                        <div class="comment-item">
+                            <div class="comment-header">
+                                <span class="comment-name">Desert Warrior</span>
+                                <span class="comment-date">May 18, 2026</span>
+                            </div>
+                            <p class="comment-content">Excellent character guides, very helpful for new players!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Natie | Red Desert Strategy Guide. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NTY | Red Desert - Characters</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Serif:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <div class="logo-icon">⚔️</div>
+                <span>NTY | Red Desert</span>
+            </div>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search guides, characters, maps...">
+                <button id="search-btn" class="search-btn">🔍</button>
+                <div id="search-results" class="search-results"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="guide.html">Game Guide</a></li>
+                <li><a href="characters.html" class="active">Characters</a></li>
+                <li><a href="maps.html">Maps</a></li>
+                <li><a href="equipment.html">Equipment</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="characters-content">
+            <h1 class="page-title">Characters</h1>
+
+            <section class="character-section">
+                <h3>Class Selection</h3>
+                <p>Red Desert offers multiple classes for players to choose from. Each class has unique skills and playstyles:</p>
+            </section>
+
+            <div class="character-grid">
+                <div class="character-card">
+                    <div class="character-icon">🛡️</div>
+                    <h4>Warrior</h4>
+                    <div class="role">Melee / Tank</div>
+                    <p>Heavy armor and massive sword. The backbone of any team with strong defense and area attacks.</p>
+                </div>
+
+                <div class="character-card">
+                    <div class="character-icon">🔮</div>
+                    <h4>Mage</h4>
+                    <div class="role">Ranged / DPS</div>
+                    <p>Master of elemental magic. Deals devastating area damage but has low defense.</p>
+                </div>
+
+                <div class="character-card">
+                    <div class="character-icon">🏹</div>
+                    <h4>Ranger</h4>
+                    <div class="role">Ranged / Agile</div>
+                    <p>Expert with bows and traps. Excellent mobility and critical strike ability.</p>
+                </div>
+
+                <div class="character-card">
+                    <div class="character-icon">🗡️</div>
+                    <h4>Assassin</h4>
+                    <div class="role">Melee / Burst</div>
+                    <p>Lurks in shadows. Specializes in assassination and quick strikes for instant kills.</p>
+                </div>
+
+                <div class="character-card">
+                    <div class="character-icon">✨</div>
+                    <h4>Cleric</h4>
+                    <div class="role">Support / Healer</div>
+                    <p>User of divine magic. Provides healing and buffs for the team.</p>
+                </div>
+
+                <div class="character-card">
+                    <div class="character-icon">🐉</div>
+                    <h4>Summoner</h4>
+                    <div class="role">Ranged / Summon</div>
+                    <p>Can summon desert elementals to fight. Unique pet system and crowd control abilities.</p>
+                </div>
+            </div>
+
+            <section class="character-section">
+                <h3>Character Development Tips</h3>
+                <p>Each class has different development paths. Here are some general tips:</p>
+                <ul>
+                    <li>Warrior: Prioritize Strength and Stamina</li>
+                    <li>Mage: Prioritize Intelligence and Spirit</li>
+                    <li>Ranger: Prioritize Agility and Critical Rate</li>
+                    <li>Assassin: Prioritize Agility and Attack Speed</li>
+                    <li>Cleric: Prioritize Spirit and Intelligence</li>
+                    <li>Summoner: Balance Intelligence and Spirit</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <div class="feedback-toggle" id="feedback-toggle">
+        <span class="toggle-icon">💬</span>
+        <span class="toggle-arrow">›</span>
+    </div>
+
+    <div class="feedback-panel" id="feedback-panel">
+        <div class="panel-body">
+            <div class="panel-header">
+                <h3>💬 Feedback</h3>
+                <span class="close-btn" id="close-btn">✕</span>
+            </div>
+            
+            <div class="panel-content">
+                <div class="feedback-form">
+                    <form id="feedback-form">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email (optional)">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Enter your feedback or suggestions..." rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </div>
+                
+                <div class="feedback-list">
+                    <h4>Latest Comments</h4>
+                    <div id="comments-list">
+                        <div class="comment-item">
+                            <div class="comment-header">
+                                <span class="comment-name">Explorer Xiao Ming</span>
+                                <span class="comment-date">May 19, 2026</span>
+                            </div>
+                            <p class="comment-content">Very detailed guides, very helpful! Looking forward to more dungeon guides!</p>
+                        </div>
+                        <div class="comment-item">
+                            <div class="comment-header">
+                                <span class="comment-name">Desert Warrior</span>
+                                <span class="comment-date">May 18, 2026</span>
+                            </div>
+                            <p class="comment-content">Excellent character guides, very helpful for new players!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Natie | Red Desert Strategy Guide. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
