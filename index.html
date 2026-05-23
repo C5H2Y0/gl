@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NTY | Red Desert</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Serif:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <div class="logo-icon">⚔️</div>
+                <span>NTY | Red Desert</span>
+            </div>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search guides, characters, maps...">
+                <button id="search-btn" class="search-btn">🔍</button>
+                <div id="search-results" class="search-results"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="guide.html">Game Guide</a></li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="maps.html">Maps</a></li>
+                <li><a href="equipment.html">Equipment</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>NTY | Red Desert</h1>
+                <p>Official Strategy Guide</p>
+                <a href="guide.html" class="cta-button">Start Exploring</a>
+            </div>
+        </section>
+
+        <section class="featured">
+            <h2>Featured Content</h2>
+            <div class="featured-cards">
+                <div class="card" onclick="location.href='guide.html'">
+                    <div class="card-icon">📖</div>
+                    <h3>Game Guide</h3>
+                    <p>Comprehensive quest guides and combat tips</p>
+                </div>
+                <div class="card" onclick="location.href='characters.html'">
+                    <div class="card-icon">⚔️</div>
+                    <h3>Characters</h3>
+                    <p>Learn about each character's skills and background</p>
+                </div>
+                <div class="card" onclick="location.href='maps.html'">
+                    <div class="card-icon">🗺️</div>
+                    <h3>Map Exploration</h3>
+                    <p>Discover hidden treasures and secret locations</p>
+                </div>
+                <div class="card" onclick="location.href='equipment.html'">
+                    <div class="card-icon">🛡️</div>
+                    <h3>Weapons & Gear</h3>
+                    <p>Guide to obtaining the strongest equipment</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="latest-news">
+            <h2>Latest News</h2>
+            <div class="news-list">
+                <article class="news-item">
+                    <span class="date">May 18, 2026</span>
+                    <h3>New Update: Desert Storm Arrives</h3>
+                    <p>New region unlocked, powerful bosses appear</p>
+                </article>
+                <article class="news-item">
+                    <span class="date">May 15, 2026</span>
+                    <h3>Class Balance Adjustment Details</h3>
+                    <p>Skill optimizations and changes for all classes</p>
+                </article>
+                <article class="news-item">
+                    <span class="date">May 10, 2026</span>
+                    <h3>Limited Event: Desert Treasure Hunt</h3>
+                    <p>Participate to earn rare rewards</p>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="visitor-counter">
+        <p>You are the <span class="count" id="visitor-count">0</span>th visitor</p>
+    </div>
+
+    <div class="feedback-toggle" id="feedback-toggle">
+        <span class="toggle-icon">💬</span>
+        <span class="toggle-arrow">›</span>
+    </div>
+
+    <div class="feedback-panel" id="feedback-panel">
+        <div class="panel-body">
+            <div class="panel-header">
+                <h3>💬 Feedback</h3>
+                <span class="close-btn" id="close-btn">✕</span>
+            </div>
+            
+            <div class="panel-content">
+                <div class="feedback-form">
+                    <form id="feedback-form">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email (optional)">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Enter your feedback or suggestions..." rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </div>
+                
+                <div class="feedback-list">
+                    <h4>Latest Comments</h4>
+                    <div id="comments-list">
+                        <div class="comment-item">
+                            <div class="comment-header">
+                                <span class="comment-name">Explorer Xiao Ming</span>
+                                <span class="comment-date">May 19, 2026</span>
+                            </div>
+                            <p class="comment-content">Very detailed guides, very helpful! Looking forward to more dungeon guides!</p>
+                        </div>
+                        <div class="comment-item">
+                            <div class="comment-header">
+                                <span class="comment-name">Desert Warrior</span>
+                                <span class="comment-date">May 18, 2026</span>
+                            </div>
+                            <p class="comment-content">Excellent character guides, very helpful for new players!</p>
+                        </div>
+                        <div class="comment-item">
+                            <div class="comment-header">
+                                <span class="comment-name">Flame Mage</span>
+                                <span class="comment-date">May 17, 2026</span>
+                            </div>
+                            <p class="comment-content">Hope to see more boss guides. Thanks to the site owner!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Natie | Red Desert Strategy Guide. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
